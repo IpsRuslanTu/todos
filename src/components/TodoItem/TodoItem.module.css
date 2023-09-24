@@ -1,0 +1,16 @@
+.todo {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    gap: 15px;
+    width: 100%;
+}
+
+.icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.completed {
+    color: green;
+}
