@@ -41,7 +41,7 @@ const App = () => {
   return (
     <div className={styles.app}>
       <div className={styles.wrapper}>
-        <Header title='TODOS'/>
+        <Header/>
         <AddTodo onSubmit={addTodo}/>
         <TodoList
           todos={visibleTodos}

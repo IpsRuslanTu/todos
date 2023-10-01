@@ -33,7 +33,10 @@ const Footer = (props: FooterProps) => {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.counter}>
+      <div
+        className={styles.counter}
+        data-testid='counter-block'
+      >
         {counter === 0
           ? 'No todos'
           : `${counter} items`
@@ -47,6 +50,7 @@ const Footer = (props: FooterProps) => {
           )}
           size='small'
           onClick={() => props.setTodosSwitcherMode(TodosSwitcherMode.All)}
+          data-testid='all-button'
         >
             All
         </Button>
@@ -57,6 +61,7 @@ const Footer = (props: FooterProps) => {
           )}
           size='small'
           onClick={() => props.setTodosSwitcherMode(TodosSwitcherMode.Active)}
+          data-testid='active-button'
         >
             Active
         </Button>
@@ -67,6 +72,7 @@ const Footer = (props: FooterProps) => {
           )}
           size='small'
           onClick={() => props.setTodosSwitcherMode(TodosSwitcherMode.Completed)}
+          data-testid='completed-button'
         >
             Completed
         </Button>
@@ -77,6 +83,7 @@ const Footer = (props: FooterProps) => {
           size='small'
           disabled={props.todos.filter(t => t.isCompleted).length === 0}
           onClick={clearCompletedTodos}
+          data-testid='clear-completed-button'
         >
             Clear completed
         </Button>

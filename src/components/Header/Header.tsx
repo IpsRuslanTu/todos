@@ -1,13 +1,9 @@
 import React from 'react'
 import styles from './Header.module.css'
 
-interface HeaderProps {
-    title: string
-}
-
-const Header = (props: HeaderProps) => {
+const Header = () => {
   return (
-    <h1 className={styles.title}>{props.title}</h1>
+    <h1 className={styles.title}>Todos</h1>
   )
 }
 

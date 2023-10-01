@@ -25,10 +25,12 @@ export const TodoItem = ({todo, updateTodo}: TodoItemProps) => {
       {todo.isCompleted
         ? <CheckCircleOutlined
           className={`${styles.icon} ${styles.completed}`}
+          data-testid='completed-icon'
         />
         : <BorderOutlined
           className={styles.icon}
           onClick={complete}
+          data-testid='complete-button'
         />
       }
       <Typography.Text
